@@ -17,6 +17,28 @@ public class BinaryTree {
 	public BinaryTree() {
 		root = null;
 	}
+	
+	public int heingOfBinaryTree(Node node) {
+		
+		if (node == null) {
+			return 0;
+		}
+		
+		return 1 + Math.max(heingOfBinaryTree(node.leftNode), heingOfBinaryTree(node.rightNode));
+	}
+	
+	public boolean isBalanced() {
+		
+		boolean balanced = false;
+		
+		if(root.leftNode != null && root.rightNode != null) {
+			if (heingOfBinaryTree(root.leftNode) == heingOfBinaryTree(root.rightNode)) {
+				balanced = true;
+			}			
+		}
+		
+		return balanced;
+	}
 
 	public void preOrderTraversal(Node currentNode) {
 		

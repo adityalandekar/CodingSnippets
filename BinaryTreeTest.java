@@ -28,6 +28,15 @@ public class BinaryTreeTest {
 		
 		System.out.println(myTree.findNode(50).data);
 		
+		System.out.println("The height of binary tree is " + myTree.heingOfBinaryTree(myTree.root));
+		
+		if(myTree.isBalanced()) {
+			System.out.println("Tree is balanced");
+		}
+		
+		else
+			System.out.println("Tree is unbalanced");
+		
 	}
 
 }
